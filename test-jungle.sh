@@ -2,25 +2,27 @@
 
 echo "🔧 Building the Jungle Throne for King Quelum 👑"
 
-WORLD_ID="6dDHcuJzY-E="
-WORLD_PATH="/sdcard/Android/data/com.mojang.minecraftpe/files/games/com.mojang/minecraftWorlds/$WORLD_ID"
+# New world path (outside Android/data restrictions)
+WORLD_PATH="/sdcard/Documents/ShinlorienWorld"
 
+# Check if the world folder exists
 if [ ! -d "$WORLD_PATH" ]; then
-  echo "❌ World not found!"
+  echo "❌ World folder not found at $WORLD_PATH"
   exit 1
 fi
 
 cd "$WORLD_PATH"
 
-# Simulate biome conversion
-echo "🌴 Transforming terrain to jungle..."
-find . -type f -name "*.mcstructure" -delete
+# Create the structures directory if it doesn't exist
+mkdir -p structures
 
-# Place test tower structure
-mkdir -p "structures"
-cat > "structures/test_tower.mcstructure" <<EOF
-This is a placeholder test tower
+# Simulate jungle environment (placeholder)
+echo "🌴 Simulating jungle environment..."
+
+# Add a test structure to confirm script runs
+cat > structures/test_tower.mcstructure <<EOF
+Test structure: Obsidian Tower placed at X:48 Y:135 Z:-25
 EOF
 
-echo "🗼 Obsidian tower placed at X:48 Y:135 Z:-25"
+echo "🗼 Test tower structure placed!"
 echo "✅ All structures created. Enter Minecraft to explore your legacy, my king."
