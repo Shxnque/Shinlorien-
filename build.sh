@@ -2,7 +2,7 @@
 
 echo "🔧 Building the Kingdom of Shinlórien for King Quelum 👑"
 
-cd /sdcard/Android/data/com.mojang.minecraftpe/files/games/com.mojang/minecraftWorlds/6dDHcuJzY-E= || {
+cd /sdcard/ShinlorienWorld/6dDHcuJzY-E= || {
   echo "❌ World not found!"
   exit 1
 }
@@ -19,4 +19,4 @@ mkdir -p Shinlorien/Underground_City
 
 echo "🌄 Shinlórien has begun construction..." > Shinlorien/readme.txt
 
-echo "✅ All structures created. Now enter the world to begin your legend, my lord."
+echo "✅ All structures created. Enter Minecraft to explore your legacy, my king."
